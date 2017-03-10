@@ -7,7 +7,7 @@
 	<bean name="customerRepository" 
 		class="com.metafourarnob.repository.HibernateCustomerRepositoryImpl"></bean>
 	<bean name="customerService"
-		class="com.metafourarnob.service.CustomerServiceImpl">
-		<constructor-arg index="0" ref="customerRepository"></constructor-arg>
+		class="com.metafourarnob.service.CustomerServiceImpl" autowire="constructor">
+		<!--   <constructor-arg index="0" ref="customerRepository"></constructor-arg> -->
 		</bean>
 </beans>
