@@ -8,6 +8,6 @@
 		class="com.metafourarnob.repository.HibernateCustomerRepositoryImpl"></bean>
 	<bean name="customerService"
 		class="com.metafourarnob.service.CustomerServiceImpl">
-		<property name="customerRepository" ref="customerRepository"></property>
+		<constructor-arg index="0" ref="customerRepository"></constructor-arg>
 		</bean>
 </beans>

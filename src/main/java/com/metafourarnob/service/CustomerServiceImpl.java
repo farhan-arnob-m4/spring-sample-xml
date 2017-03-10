@@ -9,6 +9,13 @@ public class CustomerServiceImpl implements CustomerService {
 	
 	private CustomerRepository customerRepository;
 	
+	public CustomerServiceImpl(){
+		
+	}
+	public CustomerServiceImpl(CustomerRepository customerRepository) {
+		this.customerRepository = customerRepository;
+	}
+	
 	/* (non-Javadoc)
 	 * @see com.metafourarnob.service.CustomerService#findAll()
 	 */
