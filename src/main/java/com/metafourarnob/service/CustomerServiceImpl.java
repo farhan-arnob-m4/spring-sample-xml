@@ -4,11 +4,10 @@ import java.util.List;
 
 import com.metafourarnob.model.Customer;
 import com.metafourarnob.repository.CustomerRepository;
-import com.metafourarnob.repository.HibernateCustomerRepositoryImpl;
 
 public class CustomerServiceImpl implements CustomerService {
 	
-	private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
+	private CustomerRepository customerRepository;
 	
 	/* (non-Javadoc)
 	 * @see com.metafourarnob.service.CustomerService#findAll()
@@ -16,6 +15,10 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public List<Customer> findAll(){
 		return customerRepository.findAll();
+	}
+
+	public void setCustomerRepository(CustomerRepository customerRepository) {
+		this.customerRepository = customerRepository;
 	}
 	
 
