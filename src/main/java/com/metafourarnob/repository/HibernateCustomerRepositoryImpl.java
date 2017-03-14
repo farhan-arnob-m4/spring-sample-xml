@@ -3,15 +3,18 @@ package com.metafourarnob.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import com.metafourarnob.model.Customer;
 
 public class HibernateCustomerRepositoryImpl implements CustomerRepository {
 	
+	@Value("${dbUserName}")
 	private String dbUserName;
 
-	public void setDbUserName(String dbUserName) {
-		this.dbUserName = dbUserName;
-	}
+//	public void setDbUserName(String dbUserName) {
+//		this.dbUserName = dbUserName;
+//	}
 
 	/* (non-Javadoc)
 	 * @see com.metafourarnob.repository.CustomerRepository#findAll()
